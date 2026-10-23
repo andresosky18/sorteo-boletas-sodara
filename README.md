@@ -1,10 +1,10 @@
-# 🎟️ Plataforma Web de Sorteos y Rifas (SODARA)
+# Plataforma Web de Sorteos y Rifas (SODARA)
 
 Sistema completo para la gestión, venta en línea y administración de sorteos y boletas digitales, desarrollado con **React + Vite + Tailwind CSS** en el Frontend y **PHP + MySQL + PHPMailer** en el Backend, integrado con la pasarela de pagos **Wompi**.
 
 ---
 
-## ✨ Características Principales
+##  Características Principales
 
 - **Catálogo y Tienda de Boletas:** Selección manual en grilla interactiva o mediante **Combos Rápidos personalizables** (`x5`, `x15`, `x30`, etc.).
 - **Pasarela de Pagos Wompi:** Integración con firma criptográfica de integridad (`SHA-256`) y confirmación vía Webhook / verificación en tiempo real.
@@ -18,7 +18,7 @@ Sistema completo para la gestión, venta en línea y administración de sorteos 
 
 ---
 
-## ⚙️ Instalación y Configuración
+##  Instalación y Configuración
 
 ### 1. Frontend (React + Vite)
 ```bash
