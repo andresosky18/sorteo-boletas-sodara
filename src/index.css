@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700;800&display=swap');
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-lightPrimary: #F4F7FE;
+  
+  --color-brandLinear: #868CFF;
+  
+  --color-brand-50: #E9E3FF;
+  --color-brand-100: #C0B8FE;
+  --color-brand-200: #A195FD;
+  --color-brand-300: #8171FC;
+  --color-brand-400: #7551FF;
+  --color-brand-500: #422AFB;
+  --color-brand-600: #3311DB;
+  --color-brand-700: #2111A5;
+  --color-brand-800: #190793;
+  --color-brand-900: #11047A;
+
+  --color-navy-50: #d0dcfb;
+  --color-navy-100: #aac0fe;
+  --color-navy-200: #a3b9f8;
+  --color-navy-300: #728fea;
+  --color-navy-400: #3652ba;
+  --color-navy-500: #1b3bbb;
+  --color-navy-600: #24388a;
+  --color-navy-700: #1B254B;
+  --color-navy-800: #111c44;
+  --color-navy-900: #0b1437;
+
+  --color-shadow-500: rgba(112, 144, 176, 0.08);
+
+  --shadow-horizon: 0px 18px 40px rgba(112, 144, 176, 0.12);
+  --shadow-3xl: 14px 17px 40px 4px rgba(112, 144, 176, 0.08);
+
+  --font-sans: 'DM Sans', sans-serif;
+  --font-dm: 'DM Sans', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--color-lightPrimary);
+}
+
+.dark body {
+  background-color: #000000;
+}
+.cache-bust-v9 { display: none; }
+
+
+.cache-bust-v10 { display: none; }
+
+
+.cache-bust-v11 { display: none; }
+
+
+.cache-bust-v12 { display: none; }
+
+
+.cache-bust-v13 { display: none; }
+
+
+.cache-bust-v14 { display: none; }
+
+
+.cache-bust-v16 { display: none; }
+
+
+.cache-bust-v21 { display: none; }
+
