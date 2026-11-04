@@ -205,7 +205,7 @@ export async function descargarTicketVIP({
     ctx.fillStyle = '#09090b';
     ctx.font = '900 34px monospace';
     ctx.textAlign = 'center';
-    const numStr = '#' + String(num).padStart(2, '0');
+    const numStr = '#' + String(num).padStart(4, '0');
     ctx.fillText(numStr, px + pillW / 2, py + 46);
   });
 
@@ -322,7 +322,7 @@ export async function descargarTicketVIP({
   // 10. Descargar archivo PNG
   const dataUrl = canvas.toDataURL('image/png');
   const link = document.createElement('a');
-  const sufijo = listaNumeros.join('-');
+  const sufijo = listaNumeros.map(n => String(n).padStart(4, '0')).join('-');
   link.download = `Boleta_VIP_Sodara_${sufijo}.png`;
   link.href = dataUrl;
   document.body.appendChild(link);

@@ -73,7 +73,7 @@ const TabMovimientos = () => {
                           key={idx}
                           className="inline-flex items-center px-2 py-0.5 rounded-md text-xs font-bold bg-blue-50 text-blue-700 dark:bg-blue-500/10 dark:text-blue-400"
                         >
-                          #{num}
+                          #{String(num).padStart(4, '0')}
                         </span>
                       ))}
                     </div>

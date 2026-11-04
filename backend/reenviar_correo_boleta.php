@@ -21,9 +21,11 @@ if (empty($email)) {
 
 $asunto = "¡Que empiece la emoción! Tus números están listos 🍀";
 
+$numero_fmt = str_pad(trim(str_replace('#', '', $numero)), 4, '0', STR_PAD_LEFT);
+
 $lista_boletas = '
 <div style="background-color: #f8f9fa; border: 1px solid #eee; border-radius: 12px; padding: 15px 20px; margin-bottom: 10px;">
-  <span style="font-size: 18px; font-weight: 800; color: #111;">🎟️ #' . htmlspecialchars($numero) . '</span>
+  <span style="font-size: 18px; font-weight: 800; color: #111;">🎟️ #' . htmlspecialchars($numero_fmt) . '</span>
 </div>';
 
 $mensaje = '

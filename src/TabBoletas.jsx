@@ -123,7 +123,7 @@ const TabBoletas = () => {
   });
 
   const tickets = sorteo ? Array.from({length: sorteo.totalBoletas}).map((_, i) => {
-    const num = i.toString().padStart(3, '0');
+    const num = i.toString().padStart(4, '0');
     const boleta = boletasVendidasMap[i];
     
     let state = 'Libre';

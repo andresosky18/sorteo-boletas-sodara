@@ -126,7 +126,7 @@ const CheckoutModal = ({ isOpen, onClose, seleccionadas, sorteo, totalOverride, 
             </div>
             <div className="flex flex-wrap gap-1 mt-3">
               {seleccionadas.map(num => (
-                <span key={num} className="bg-white text-blue-700 text-xs font-bold px-2 py-1 rounded shadow-sm border border-blue-100">#{num}</span>
+                <span key={num} className="bg-white text-blue-700 text-xs font-bold px-2 py-1 rounded shadow-sm border border-blue-100">#{String(num).padStart(4, '0')}</span>
               ))}
             </div>
           </div>

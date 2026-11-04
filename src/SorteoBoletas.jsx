@@ -174,7 +174,7 @@ if (pagoExitoso && pagoExitoso !== 'rechazado') {
           <button
             onClick={() => descargarTicketVIP({
               sorteo: sorteo?.nombre || 'GRAN SORTEO SODARA',
-              numeros: boletasCompradas.length > 0 ? boletasCompradas : ['00'],
+              numeros: boletasCompradas.length > 0 ? boletasCompradas : ['0000'],
               cliente: nombreInput || 'Participante Oficial',
               referencia: pagoExitoso.reference || pagoExitoso.id || 'SODARA-VIP',
               estado: 'Aprobado'
@@ -328,7 +328,7 @@ if (pagoExitoso && pagoExitoso !== 'rechazado') {
               
               <div className="grid grid-cols-5 sm:grid-cols-10 gap-2 md:gap-3">
                 {Array.from({ length: (sorteo?.totalBoletas || 100) }).map((_, index) => {
-                  const num = index.toString().padStart(2, '0');
+                  const num = index.toString().padStart(4, '0');
                   const estadoVendida = vendidas[index];
                   const vendidía = estadoVendida !== undefined;
                   const isAprobada = estadoVendida === 'aprobado' || estadoVendida === 'pagado';

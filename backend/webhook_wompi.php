@@ -19,7 +19,7 @@ if (!$data || !isset($data['event'])) {
 
 
 // Verificar firma de Eventos Wompi para seguridad
-$wompi_events_secret = 'prod_events_Obxk1I8By67fo5Ov98GspnKOEq0UiV7p';
+$wompi_events_secret = $wompi_events_secret ?? (getenv('WOMPI_EVENTS_SECRET') ?: 'TU_WOMPI_EVENTS_SECRET');
 $signature = $data['signature'] ?? null;
 if ($signature && isset($signature['properties'], $signature['checksum'])) {
     $props = $signature['properties'];
@@ -125,8 +125,8 @@ function enviarCorreoExito($destinatario, $nombre, $sorteo, $boletas, $ref) {
     $lista_boletas = '';
     $arr_boletas = explode(', #', $boletas);
     foreach ($arr_boletas as $b) {
-        $clean_b = str_replace('#', '', $b);
-        $lista_boletas .= '<div style="background:#f5f5f5; border-radius:10px; padding:10px; margin-bottom:5px; font-weight:bold; font-size:16px;">🎟️ #'.htmlspecialchars(trim($clean_b)).'</div>';
+        $clean_b = str_pad(trim(str_replace('#', '', $b)), 4, '0', STR_PAD_LEFT);
+        $lista_boletas .= '<div style="background:#f5f5f5; border-radius:10px; padding:10px; margin-bottom:5px; font-weight:bold; font-size:16px;">🎟️ #'.htmlspecialchars($clean_b).'</div>';
     }
 
     $mensaje = '

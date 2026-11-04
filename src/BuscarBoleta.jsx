@@ -163,7 +163,7 @@ const BuscarBoleta = ({ onNavigate }) => {
                     <div className="flex justify-between items-start mb-4">
                       <div>
                         <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">BOLETA</p>
-                        <p className="text-2xl font-black text-slate-900 tracking-tighter">#{boleta.numero}</p>
+                        <p className="text-2xl font-black text-slate-900 tracking-tighter">#{String(boleta.numero).padStart(4, '0')}</p>
                       </div>
                       
                       {boleta.estado.toLowerCase() === 'aprobado' || boleta.estado.toLowerCase() === 'pagado' ? (

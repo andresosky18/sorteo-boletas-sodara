@@ -14,6 +14,7 @@ $user = 'TU_USUARIO_BD';
 $pass = 'TU_PASSWORD_BD';
 $dbname = 'TU_NOMBRE_BD';
 $wompi_integrity_secret = 'TU_WOMPI_INTEGRITY_SECRET';
+$wompi_events_secret = 'TU_WOMPI_EVENTS_SECRET';
 
 $conn = new mysqli($host, $user, $pass, $dbname);
 

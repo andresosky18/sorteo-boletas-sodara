@@ -126,8 +126,8 @@ function enviarCorreoExito($destinatario, $nombre, $sorteo, $boletas, $ref) {
     $lista_boletas = '';
     $arr_boletas = explode(', #', $boletas);
     foreach ($arr_boletas as $b) {
-        $clean_b = str_replace('#', '', $b);
-        $lista_boletas .= '<div style="background:#f5f5f5; border-radius:10px; padding:10px; margin-bottom:5px; font-weight:bold; font-size:16px;">🎟️ #'.htmlspecialchars(trim($clean_b)).'</div>';
+        $clean_b = str_pad(trim(str_replace('#', '', $b)), 4, '0', STR_PAD_LEFT);
+        $lista_boletas .= '<div style="background:#f5f5f5; border-radius:10px; padding:10px; margin-bottom:5px; font-weight:bold; font-size:16px;">🎟️ #'.htmlspecialchars($clean_b).'</div>';
     }
 
     $mensaje = '
